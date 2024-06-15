@@ -1,3 +1,3 @@
 const { firstProblem } = require("./functions");
 
-console.log(firstProblem(10));
+console.log(firstProblem(1000));
