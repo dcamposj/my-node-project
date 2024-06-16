@@ -40,6 +40,12 @@ function largestPrimeFactor(number) {
   return factors;
 }
 
+// Palindrome 
+
+function threeDigitPalindrome(){
+  //TODO: Create a the biggest palindrome of three digit numbers
+}
+
 // Exporting the functions
 module.exports = {
   sumOfMultiples,
