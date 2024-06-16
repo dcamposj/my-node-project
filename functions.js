@@ -40,10 +40,33 @@ function largestPrimeFactor(number) {
   return factors;
 }
 
-// Palindrome 
+// Palindrome
+// Problem 4 - Largest palindrome product
+// A palindromic number reads the same both ways.
+// The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+// Find the largest palindrome made from the product of two 3-digit numbers.
 
-function threeDigitPalindrome(){
-  //TODO: Create a the biggest palindrome of three digit numbers
+function isPalindrome(num) {
+  const str = num.toString();
+  return str === str.split("").reverse().join("");
+}
+
+function threeDigitPalindrome() {
+  // Largest number possible: 998 001 (999*999)
+  let maxPalindrome = 0;
+
+  for (let i = 999; i >= 100; i--) {
+    for (let j = 999; j >= 100; j--) {
+      const product = i * j;
+      if (isPalindrome(product) && product > maxPalindrome) {
+        maxPalindrome = product;
+        console.log("Value for i:" + i);
+        console.log("Value for j:" + j);
+      }
+    }
+  }
+
+  return maxPalindrome;
 }
 
 // Exporting the functions
@@ -51,4 +74,5 @@ module.exports = {
   sumOfMultiples,
   fibonacci,
   largestPrimeFactor,
+  threeDigitPalindrome,
 };
